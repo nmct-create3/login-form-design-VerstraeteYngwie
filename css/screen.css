@@ -486,6 +486,7 @@ label, input {
 
 .c-form-field--option {
     display: flex;
+    align-items: center;
 }
 
 /*
@@ -509,6 +510,10 @@ label, input {
 }
 
 .c-input:focus {
+    outline: none;
+    border: 1px solid #3385FF;
+    box-shadow: h-offset v-offset blur spread color;
+    box-shadow: 0 0 0 3px #3385ff4d; 
 }
 
 /*
@@ -534,19 +539,30 @@ label, input {
 */
 
 .c-button {
-
+    background-color: #3385FF;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 200;
+    font-family: "Inter", Helvetica, arial, sans-serif;
+    height: 48px;
+    width: 100%;
+    border: 1px solid #2E77E6;
+    border-radius: 3px;
 }
 
 .c-button:hover {
-
+    background-color: #4F95FF;
 }
 
 .c-button:focus {
-
+    background-color: #3385FF;
+    box-shadow: h-offset v-offset blur spread color;
+    box-shadow: 0 0 0 3px #3385FF7D; 
 }
 
 .c-button:active {
-
+    background-color: #2E77E6;
 }
 
 .c-button--block {
