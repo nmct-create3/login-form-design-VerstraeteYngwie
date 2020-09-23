@@ -2,6 +2,18 @@
 #FONTS
 \*------------------------------------*/
 
+@font-face {
+    font-family: "Inter";
+    font-weight: 200;
+    src: url("../fonts/Inter-SemiBold.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: "Inter";
+    font-weight: 400;
+    src: url("../fonts/Inter-Regular.woff2") format("woff2");
+  }
+
 /*------------------------------------*\
 #Variables
 \*------------------------------------*/
@@ -25,12 +37,12 @@
 html {
     font-size: 16px;
     line-height: 1.5;
-    font-family: Helvetica, arial, sans-serif;
-    color: grey;
+    font-family: "Inter", Helvetica, arial, sans-serif;
+    color: #20223a;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: white;
+    background-color: #F5F6FA;
 }
 
 *,
@@ -47,13 +59,13 @@ html {
 */
 
 ::-moz-selection {
-    background: HotPink;
+    background: #3385FF;
     color: white;
     text-shadow: none;
 }
 
 ::selection {
-    background: HotPink;
+    background: #3385FF;
     color: white;
     text-shadow: none;
 }
@@ -158,18 +170,22 @@ hr {
 }
 
 a {
-    color: HotPink;
+    color: #3385FF;
     transition: all .1s ease-in-out;
 }
 
 a:visited,
 a:active {
-    color: HotPink;
+    color: #3385FF;
 }
 
 a:hover,
 a:focus {
     color: DeepPink;
+}
+
+label, input {
+    display: block;
 }
 
 /*------------------------------------*\
@@ -432,6 +448,30 @@ a:focus {
     Website main logo
 */
 
+.c-logo {
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.c-logo__symbol {
+    height: 100%;
+    display: block;
+}
+
+.c-logo__path--1 {
+    fill: #20223A;
+}
+
+.c-logo__path--2 {
+    fill: #3385FF;
+}
+
+.c-logo__path--3 {
+    fill: #1B4186;
+}
+
 /*
     Component: Card
     ---
@@ -444,6 +484,10 @@ a:focus {
     Everything form related here
 */
 
+.c-form-field--option {
+    display: flex;
+}
+
 /*
     Component: Input
     ---
@@ -451,7 +495,17 @@ a:focus {
 */
 
 .c-input {
-
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    font-family: inherit;
+    color: #20223A;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 11px;
 }
 
 .c-input:focus {
